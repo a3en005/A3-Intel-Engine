@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#060b14">
+    <title>A3-Elite | Market Intelligence</title>
+    
+    <link rel="manifest" href="manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="theme-a3">
+    <canvas id="canvas3d"></canvas>
+
+    <div id="a3-loader-new">
+        <div class="loader-container">
+            <div class="orbit-box">
+                <div class="orbit-ring ring-1"></div>
+                <div class="orbit-ring ring-2"></div>
+                <div class="orbit-ring ring-3"></div>
+                <div class="loader-core">A3</div>
+            </div>
+            <div id="status-text-new">ESTABLISHING NEURAL LINK...</div>
+            <div class="progress-bar"><div id="progress-fill"></div></div>
+        </div>
+    </div>
+
+    <header id="hdr" class="glass-panel">
+        <div class="logo">A3-ELITE <span>INTELLIGENCE</span></div>
+        <div id="ctrl">
+            <input type="text" id="sym" class="input-glass" placeholder="SYMBOL..." value="EURUSD">
+            <select id="tf" class="sel-glass">
+                <option value="1m">1m</option>
+                <option value="5m">5m</option>
+                <option value="15m" selected>15m</option>
+                <option value="1h">1h</option>
+                <option value="4h">4h</option>
+                <option value="1d">1D</option>
+            </select>
+            <button id="analyze-btn" class="glow-btn">ANALYZE</button>
+        </div>
+        <div class="hright">
+            <div id="sestag">NY SESSION</div>
+            <div id="clk">00:00:00 UTC</div>
+            <div id="status"><span class="ldot"></span> LIVE</div>
+        </div>
+    </header>
+
+    <nav id="tabs" class="glass-nav">
+        <div class="tab active" data-view="dashboard">DASHBOARD</div>
+        <div class="tab" data-view="signals">SIGNALS</div>
+        <div class="tab" data-view="screener">SCREENER</div>
+        <div class="tab" data-view="vision">AI VISION</div>
+        <div class="tab" data-view="journal">JOURNAL</div>
+        <div class="tab" data-view="settings">SETTINGS</div>
+    </nav>
+
+    <div id="wrap">
+        <aside id="sidebar" class="glass-panel collapsed">
+            <div id="sidebar-toggle">▶</div>
+            <div class="sb-content">
+                <div class="sb-section">
+                    <div class="sb-label">KILLZONES</div>
+                    <div id="kz-list" class="sb-data">--:--</div>
+                </div>
+                <div class="sb-section">
+                    <div class="sb-label">LIQUIDITY</div>
+                    <div id="liq-list" class="sb-data">PREMIUM / DISCOUNT</div>
+                </div>
+                <div class="sb-section">
+                    <div class="sb-label">DXY BIAS</div>
+                    <div id="dxy-bias" class="sb-data">NEUTRAL</div>
+                </div>
+            </div>
+        </aside>
+
+        <main id="views">
+            <div id="dashboard-view" class="view active">
+                <div id="tv-wrapper" class="glass-panel">
+                    <div class="chart-header">
+                        <span id="tv-sym">EURUSD</span>
+                        <span id="tv-price">--.----</span>
+                        <span id="tv-chg">--%</span>
+                    </div>
+                    <div id="tvframe">
+                        </div>
+                </div>
+                <div class="analysis-grid">
+                    <div id="rpt-narr" class="glass-panel">Initializing ICT Data Streams...</div>
+                </div>
+            </div>
+            
+            <div id="signals-view" class="view">
+                <div class="view-header">
+                    <h2>LIVE ICT SIGNALS</h2>
+                    <span class="badge-uni">UNICORN MODELS ONLY</span>
+                </div>
+                <div id="sig-grid" class="sig-grid">
+                    </div>
+            </div>
+
+            <div id="vision-view" class="view">
+                <div class="vision-container glass-panel">
+                    <h3>NEURAL CHART ANALYSIS</h3>
+                    <p>Upload a screenshot for ICT methodology breakdown via Claude 3.5 Sonnet.</p>
+                    <div class="drop-zone" id="drop-zone">
+                        <span>DRAG CHART HERE OR CLICK</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="journal-view" class="view">
+                <div class="journal-container glass-panel">
+                    <div class="j-header">
+                        <h3>TRADE JOURNAL</h3>
+                        <button id="export-csv" class="glow-btn-small">EXPORT CSV</button>
+                    </div>
+                    <div id="journal-table">
+                        </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <audio id="snd-click" src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3" preload="auto"></audio>
+    <audio id="snd-alert" src="https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3" preload="auto"></audio>
+
+    <script src="assets/js/logic.js"></script>
+    <script type="module" src="assets/js/engine.js"></script>
+  <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('service-worker.js')
+                .then(reg => console.log('A3-Neural: Service Worker Active', reg.scope))
+                .catch(err => console.log('A3-Neural: Worker Registration Failed', err));
+            });
+        }
+    </script> 
+</body>
+</html>

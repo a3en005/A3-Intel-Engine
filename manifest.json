@@ -1,0 +1,25 @@
+{
+  "name": "A3-Elite Intelligence",
+  "short_name": "A3-Elite",
+  "description": "Professional ICT Market Intelligence & AI Vision Platform",
+  "start_url": "index.html",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#060b14",
+  "theme_color": "#0ea5e9",
+  "categories": ["finance", "business"],
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect fill='%23060b14' width='192' height='192'/%3E%3Ctext x='96' y='125' font-size='70' text-anchor='middle' fill='%230ea5e9' font-family='Rajdhani' font-weight='800'%3EA3%3C/text%3E%3Cpath d='M40 140 L152 140' stroke='%2300f5a0' stroke-width='4'/%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect fill='%23060b14' width='512' height='512'/%3E%3Ctext x='256' y='330' font-size='200' text-anchor='middle' fill='%230ea5e9' font-family='Rajdhani' font-weight='800'%3EA3%3C/text%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}
