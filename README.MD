@@ -2,6 +2,7 @@
 ## The Fusion of Institutional Trading Mechanism, AI Vision and 3D Interactive Design
 
 ---
+---
 
 ## 🌌 **NEW: NEURAL 3D ARCHITECTURE (v3.0)**
 
@@ -45,16 +46,4 @@
 - **Telegram Live Alerts:** Automated bot integration for 5-star signal push notifications.
 
 ---
-
-## 📋 **DIAGNOSTIC & TESTING**
-
-### **Neural Bridge Test Suite**
-Developers can verify the 3D-to-Logic connection using:
-- **Ctrl + Shift + T:** Trigger Bullish Test (Emerald Mode + Signal Alert).
-- **Ctrl + Shift + B:** Trigger Bearish Test (Crimson Mode + Low Volatility).
-
 ---
-
-**Version:** 3.0 (Neural Edition)  
-**Release Date:** March 2026  
-**Developer Note:** *This platform bridges the gap between raw data and sensory experience. Trade with intelligence.*
